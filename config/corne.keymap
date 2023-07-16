@@ -12,18 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        right_l0 {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <20 21>;
-            layers = <0>;
-        };
-
-        left_l0 {
-            bindings = <&kp LEFT_ARROW>;
-            key-positions = <19 20>;
-            layers = <0>;
-        };
-
         delete_l0 {
             bindings = <&kp DELETE>;
             key-positions = <11 10>;
