@@ -21,6 +21,70 @@
         esc_l0 {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
+            layers = <>;
+        };
+
+        f1 {
+            bindings = <&kp F1>;
+            key-positions = <1 13>;
+            layers = <>;
+        };
+
+        f2 {
+            bindings = <&kp F2>;
+            key-positions = <2 14>;
+            layers = <>;
+        };
+
+        f3 {
+            bindings = <&kp F3>;
+            key-positions = <3 15>;
+            layers = <>;
+        };
+
+        f4 {
+            bindings = <&kp F4>;
+            key-positions = <4 16>;
+        };
+
+        f5 {
+            bindings = <&kp F5>;
+            key-positions = <5 17>;
+        };
+
+        f6 {
+            bindings = <&kp F6>;
+            key-positions = <6 18>;
+        };
+
+        f7 {
+            bindings = <&kp F7>;
+            key-positions = <7 19>;
+        };
+
+        f8 {
+            bindings = <&kp F8>;
+            key-positions = <8 20>;
+        };
+
+        f9 {
+            bindings = <&kp F9>;
+            key-positions = <9 21>;
+        };
+
+        f10 {
+            bindings = <&kp F10>;
+            key-positions = <10 22>;
+        };
+
+        caps_lock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <24 35>;
+        };
+
+        prtscrn {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <9 10>;
         };
     };
 
@@ -55,7 +119,7 @@
 &kp ESCAPE  &kp N1  &kp NUMBER_2    &kp N3    &kp N4         &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
     &trans  &trans        &trans    &trans  &kp HOME    &kp PAGE_UP    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT         &trans  &kp EQUAL
     &trans  &trans        &trans    &trans   &kp END  &kp PAGE_DOWN          &trans          &trans    &trans        &trans  &kp BACKSLASH     &trans
-                                  &kp LGUI    &trans         &trans    &kp NUMBER_0          &trans  &kp RALT
+                                  &kp LGUI    &trans         &trans          &trans          &trans  &kp RALT
             >;
         };
 
@@ -68,10 +132,10 @@
 
             label = "Raise";
             bindings = <
- &kp TILDE        &kp F1        &kp F2        &kp F3        &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9          &kp F10  &kp DEL
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans    &trans  &trans  &trans  &trans  &kp PRINTSCREEN   &trans
-    &trans        &trans        &trans        &trans        &trans  &trans    &trans  &trans  &trans  &trans           &trans   &trans
-                                              &trans        &trans  &trans    &trans  &trans  &trans
+&kp TILDE  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH    &kp DOLLAR  &kp PERCENT       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
+   &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &trans    &kp C_VOL_UP         &trans  &kp C_VOL_DN                &trans                 &trans        &kp PLUS
+   &trans           &trans        &trans        &trans        &trans       &trans          &trans         &trans        &trans                &trans               &kp PIPE          &trans
+                                                &trans        &trans       &trans          &trans         &trans    &bt BT_CLR
             >;
         };
     };
