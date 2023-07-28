@@ -21,25 +21,21 @@
         esc_l0 {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            layers = <>;
         };
 
         f1 {
             bindings = <&kp F1>;
             key-positions = <1 13>;
-            layers = <>;
         };
 
         f2 {
             bindings = <&kp F2>;
             key-positions = <2 14>;
-            layers = <>;
         };
 
         f3 {
             bindings = <&kp F3>;
             key-positions = <3 15>;
-            layers = <>;
         };
 
         f4 {
@@ -86,6 +82,35 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <9 10>;
         };
+
+        ctrl_tab {
+            bindings = <&ctrl_tab>;
+            key-positions = <15 16>;
+            layers = <1>;
+        };
+
+        ctrl_shift_tab {
+            bindings = <&ctrl_shift_tab>;
+            key-positions = <13 14>;
+            layers = <1>;
+        };
+    };
+
+    macros {
+        ctrl_tab: ctrl_tab {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp TAB>;
+        };
+        ctrl_shift_tab: ctrl_shift_tab {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_SHIFT_TAB";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LCTRL &kp TAB &kp LSHFT>,
+                <&macro_press>;
+        };
     };
 
     keymap {
@@ -116,10 +141,10 @@
 
             label = "Lower";
             bindings = <
-&kp ESCAPE  &kp N1  &kp NUMBER_2    &kp N3    &kp N4         &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
-    &trans  &trans        &trans    &trans  &kp HOME    &kp PAGE_UP    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT         &trans  &kp EQUAL
-    &trans  &trans        &trans    &trans   &kp END  &kp PAGE_DOWN          &trans          &trans    &trans        &trans  &kp BACKSLASH     &trans
-                                  &kp LGUI    &trans         &trans          &trans          &trans  &kp RALT
+&kp ESCAPE  &kp N1  &kp NUMBER_2    &kp N3           &kp N4    &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
+    &trans  &trans        &trans    &trans        &ctrl_tab  &kp HOME    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT         &trans  &kp EQUAL
+    &trans  &trans        &trans    &trans  &ctrl_shift_tab   &kp END          &trans          &trans    &trans        &trans  &kp BACKSLASH     &trans
+                                  &kp LGUI           &trans    &trans          &trans          &trans  &kp RALT
             >;
         };
 
