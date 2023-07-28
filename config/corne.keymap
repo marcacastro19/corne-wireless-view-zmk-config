@@ -101,7 +101,9 @@
             compatible = "zmk,behavior-macro";
             label = "CTRL_TAB";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp TAB>;
+            bindings =
+                <&kp LCTRL &kp TAB>,
+                <&macro_tap>;
         };
         ctrl_shift_tab: ctrl_shift_tab {
             compatible = "zmk,behavior-macro";
