@@ -93,6 +93,14 @@
                 <&sk LCTRL &kp TAB>,
                 <&macro_press>;
         };
+        ctrl_bksp: ctrl_bksp {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_BKSP";
+            #binding-cells = <0>;
+            bindings =
+                <&sk LCTRL &kp BACKSPACE>,
+                <&macro_press>;
+        };
     };
 
     keymap {
@@ -107,7 +115,7 @@
 
             label = "Base";
             bindings = <
-  &kp TAB  &kp Q  &kp W     &kp E  &kp R                 &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P         &kp BSPC
+  &kp TAB  &kp Q  &kp W     &kp E  &kp R                 &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P    &kp BACKSPACE
 &kp LCTRL  &kp A  &kp S     &kp D  &kp F                 &kp G        &kp H  &kp J      &kp K    &kp L  &kp SEMI          &kp SQT
 &kp LSHFT  &kp Z  &kp X     &kp C  &kp V                 &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                          &kp LGUI  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2   &kp RALT
@@ -123,10 +131,10 @@
 
             label = "Lower";
             bindings = <
-&kp ESCAPE  &kp N1  &kp NUMBER_2  &kp N3     &kp N4    &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
-    &trans  &trans        &trans  &trans  &ctrl_tab  &kp HOME    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT         &trans  &kp EQUAL
-    &trans  &trans        &trans  &trans     &trans   &kp END          &trans          &trans    &trans        &trans  &kp BACKSLASH     &trans
-                                  &trans     &trans    &trans          &trans          &trans  &kp RALT
+&ctrl_tab  &kp N1  &kp NUMBER_2  &kp N3  &kp N4    &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
+   &trans  &trans        &trans  &trans  &trans  &kp HOME    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT         &trans  &kp EQUAL
+   &trans  &trans        &trans  &trans  &trans   &kp END          &trans          &trans    &trans        &trans  &kp BACKSLASH     &trans
+                                 &trans  &trans    &trans          &trans          &trans    &trans
             >;
         };
 
