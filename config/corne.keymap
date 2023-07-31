@@ -117,14 +117,6 @@
                 <&sk LCTRL &kp TAB>,
                 <&macro_press>;
         };
-        ctrl_bksp: ctrl_bksp {
-            compatible = "zmk,behavior-macro";
-            label = "CTRL_BKSP";
-            #binding-cells = <0>;
-            bindings =
-                <&sk LCTRL &kp BACKSPACE>,
-                <&macro_press>;
-        };
     };
 
     keymap {
