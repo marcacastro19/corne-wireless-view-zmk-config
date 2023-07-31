@@ -21,16 +21,19 @@
         esc_l0 {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
+            layers = <0>;
         };
 
         f1 {
             bindings = <&kp F1>;
             key-positions = <1 13>;
+            layers = <0>;
         };
 
         f2 {
             bindings = <&kp F2>;
             key-positions = <2 14>;
+            layers = <0>;
         };
 
         f3 {
@@ -41,46 +44,67 @@
         f4 {
             bindings = <&kp F4>;
             key-positions = <4 16>;
+            layers = <0>;
         };
 
         f5 {
             bindings = <&kp F5>;
             key-positions = <5 17>;
+            layers = <0>;
         };
 
         f6 {
             bindings = <&kp F6>;
             key-positions = <6 18>;
+            layers = <0>;
         };
 
         f7 {
             bindings = <&kp F7>;
             key-positions = <7 19>;
+            layers = <0>;
         };
 
         f8 {
             bindings = <&kp F8>;
             key-positions = <8 20>;
+            layers = <0>;
         };
 
         f9 {
             bindings = <&kp F9>;
             key-positions = <9 21>;
+            layers = <0>;
         };
 
         f10 {
             bindings = <&kp F10>;
             key-positions = <10 22>;
+            layers = <0>;
         };
 
         caps_lock {
             bindings = <&kp CAPSLOCK>;
             key-positions = <24 35>;
+            layers = <0>;
         };
 
         prtscrn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <9 10>;
+            layers = <0>;
+        };
+
+        lshft_del {
+            bindings = <&kp>;
+            key-positions = <24 11>;
+            layers = <0>;
+        };
+
+        rshft_del {
+            bindings = <&kp>;
+            key-positions = <35 11>;
+            layers = <0>;
         };
     };
 
