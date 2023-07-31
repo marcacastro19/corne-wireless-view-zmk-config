@@ -96,13 +96,13 @@
         };
 
         lshft_del {
-            bindings = <&kp>;
+            bindings = <&kp DEL>;
             key-positions = <24 11>;
             layers = <0>;
         };
 
         rshft_del {
-            bindings = <&kp>;
+            bindings = <&kp DELETE>;
             key-positions = <35 11>;
             layers = <0>;
         };
