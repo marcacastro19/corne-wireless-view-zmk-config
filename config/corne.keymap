@@ -94,18 +94,6 @@
             key-positions = <9 10>;
             layers = <0>;
         };
-
-        lshft_del {
-            bindings = <&kp DEL>;
-            key-positions = <24 11>;
-            layers = <0>;
-        };
-
-        rshft_del {
-            bindings = <&kp DELETE>;
-            key-positions = <35 11>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -116,6 +104,19 @@
             bindings =
                 <&sk LCTRL &kp TAB>,
                 <&macro_press>;
+        };
+    };
+
+    behaviors {
+        lshft_bksp_del: lshft_bksp_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LSHFT_BKSP_DEL";
+            bindings =
+                <&kp BACKSPACE>,
+                <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
@@ -131,7 +132,7 @@
 
             label = "Base";
             bindings = <
-  &kp TAB  &kp Q  &kp W     &kp E  &kp R                 &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P    &kp BACKSPACE
+  &kp TAB  &kp Q  &kp W     &kp E  &kp R                 &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P  &lshft_bksp_del
 &kp LCTRL  &kp A  &kp S     &kp D  &kp F                 &kp G        &kp H  &kp J      &kp K    &kp L  &kp SEMI          &kp SQT
 &kp LSHFT  &kp Z  &kp X     &kp C  &kp V                 &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                          &kp LGUI  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2   &kp RALT
