@@ -102,16 +102,24 @@
             label = "CTRL_TAB";
             #binding-cells = <0>;
             bindings =
-                <&sk LCTRL &kp TAB>,
-                <&macro_press>;
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
         ctrl_shift_tab: ctrl_shift_tab {
             compatible = "zmk,behavior-macro";
             label = "CTRL_SHIFT_TAB";
             #binding-cells = <0>;
             bindings =
-                <&sk LEFT_SHIFT &ctrl_tab>,
-                <&macro_press>;
+                <&macro_press>,
+                <&kp LSHFT &kp LCTRL>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LSHFT &kp LCTRL>;
         };
     };
 
