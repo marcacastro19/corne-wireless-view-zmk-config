@@ -105,6 +105,14 @@
                 <&sk LCTRL &kp TAB>,
                 <&macro_press>;
         };
+        ctrl_shift_tab: ctrl_shift_tab {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_SHIFT_TAB";
+            #binding-cells = <0>;
+            bindings =
+                <&sk LEFT_SHIFT &ctrl_tab>,
+                <&macro_press>;
+        };
     };
 
     behaviors {
@@ -148,10 +156,10 @@
 
             label = "Lower";
             bindings = <
-&ctrl_tab  &kp N1  &kp NUMBER_2  &kp N3    &kp N4             &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
-   &trans  &trans        &trans  &trans  &kp HOME    &kp C_VOLUME_UP    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT         &trans  &kp EQUAL
-   &trans  &trans        &trans  &trans   &kp END  &kp C_VOLUME_DOWN          &trans          &trans    &trans        &trans  &kp BACKSLASH     &trans
-                                 &trans    &trans             &trans          &trans          &trans    &trans
+     &kp ESCAPE     &kp N1  &kp NUMBER_2  &kp N3    &kp N4             &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
+&ctrl_shift_tab  &ctrl_tab        &trans  &trans  &kp HOME    &kp C_VOLUME_UP    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT  &kp BACKSLASH  &kp EQUAL
+         &trans     &trans        &trans  &trans   &kp END  &kp C_VOLUME_DOWN          &trans          &trans    &trans        &trans         &trans     &trans
+                                          &trans    &trans             &trans          &trans          &trans    &trans
             >;
         };
 
@@ -165,8 +173,8 @@
             label = "Raise";
             bindings = <
 &kp TILDE  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH    &kp DOLLAR  &kp PERCENT       &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-   &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &trans    &kp UP_ARROW       &kp LEFT      &kp DOWN             &kp RIGHT                 &trans        &kp PLUS
-   &trans           &trans        &trans        &trans        &trans       &trans          &trans         &trans        &trans                &trans               &kp PIPE          &trans
+   &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &trans    &kp UP_ARROW       &kp LEFT      &kp DOWN             &kp RIGHT               &kp PIPE        &kp PLUS
+   &trans           &trans        &trans        &trans        &trans       &trans          &trans         &trans        &trans                &trans                 &trans          &trans
                                                 &trans        &trans       &trans          &trans         &trans    &bt BT_CLR
             >;
         };
