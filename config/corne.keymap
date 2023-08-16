@@ -94,6 +94,16 @@
             key-positions = <9 10>;
             layers = <0>;
         };
+
+        home {
+            bindings = <&kp HOME>;
+            key-positions = <16 17>;
+        };
+
+        end {
+            bindings = <&kp END>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {
@@ -120,6 +130,30 @@
                 <&kp TAB>,
                 <&macro_release>,
                 <&kp LSHFT &kp LCTRL>;
+        };
+        ctrl_t: ctrl_t {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_T";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp T>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
+        ctrl_w: ctrl_w {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_W";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
     };
 
@@ -148,10 +182,10 @@
 
             label = "Base";
             bindings = <
-  &kp TAB  &kp Q  &kp W     &kp E  &kp R                 &kp T        &kp Y  &kp U      &kp I    &kp O     &kp P  &lshft_bksp_del
-&kp LCTRL  &kp A  &kp S     &kp D  &kp F                 &kp G        &kp H  &kp J      &kp K    &kp L  &kp SEMI          &kp SQT
-&kp LSHFT  &kp Z  &kp X     &kp C  &kp V                 &kp B        &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                         &kp LGUI  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2   &kp RALT
+  &kp TAB  &kp Q  &kp W         &kp E  &kp R                 &kp T        &kp Y  &kp U         &kp I    &kp O     &kp P  &lshft_bksp_del
+&kp LCTRL  &kp A  &kp S         &kp D  &kp F                 &kp G        &kp H  &kp J         &kp K    &kp L  &kp SEMI          &kp SQT
+&kp LSHFT  &kp Z  &kp X         &kp C  &kp V                 &kp B        &kp N  &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                         &kp LEFT_ALT  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2  &kp LEFT_GUI
             >;
         };
 
@@ -164,10 +198,10 @@
 
             label = "Lower";
             bindings = <
-&kp ESCAPE           &kp N1  &kp NUMBER_2  &kp N3    &kp N4             &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
- &ctrl_tab  &ctrl_shift_tab        &trans  &trans  &kp HOME    &kp C_VOLUME_UP    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT  &kp BACKSLASH  &kp EQUAL
-    &trans           &trans        &trans  &trans   &kp END  &kp C_VOLUME_DOWN          &trans          &trans    &trans        &trans         &trans     &trans
-                                           &trans    &trans             &trans          &trans          &trans    &trans
+&kp ESCAPE  &kp N1  &kp NUMBER_2           &kp N3     &kp N4   &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
+    &trans  &trans       &ctrl_w  &ctrl_shift_tab  &ctrl_tab  &ctrl_t    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT  &kp BACKSLASH  &kp EQUAL
+    &trans  &trans        &trans           &trans     &trans   &trans          &trans          &trans    &trans        &trans         &trans     &trans
+                                           &trans     &trans   &trans          &trans          &trans    &trans
             >;
         };
 
