@@ -196,9 +196,9 @@
 
             label = "Base";
             bindings = <
-  &kp TAB  &kp Q  &kp W         &kp E  &kp R                 &kp T        &kp Y  &kp U         &kp I    &kp O     &kp P  &lshft_bksp_del
-&kp LCTRL  &kp A  &kp S         &kp D  &kp F                 &kp G        &kp H  &kp J         &kp K    &kp L  &kp SEMI          &kp SQT
-&kp LSHFT  &kp Z  &kp X         &kp C  &kp V                 &kp B        &kp N  &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T                   &kp Y      &kp U  &kp I         &kp O    &kp P     &lshft_bksp_del
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G                   &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B                   &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                          &kp LEFT_ALT  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2  &kp LEFT_GUI
             >;
         };
@@ -212,10 +212,10 @@
 
             label = "Lower";
             bindings = <
-     &kp ESCAPE  &kp N1  &kp NUMBER_2  &kp N3    &kp N4             &kp N5    &kp NUMBER_6          &kp N7    &kp N8  &kp NUMBER_9         &kp N0  &kp MINUS
-      &ctrl_tab  &trans        &trans  &trans  &kp HOME    &kp C_VOLUME_UP    &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN     &kp RIGHT  &kp BACKSLASH  &kp EQUAL
-&ctrl_shift_tab  &trans        &trans  &trans   &kp END  &kp C_VOLUME_DOWN          &trans          &trans    &trans        &trans         &trans     &trans
-                                       &trans    &trans             &trans          &trans          &trans    &trans
+&kp ESCAPE  &kp N1           &kp NUMBER_2  &kp N3  &kp N4    &kp N5               &kp NUMBER_6  &kp N7          &kp N8    &kp NUMBER_9  &kp N0         &kp MINUS
+&ctrl_tab   &ctrl_shift_tab  &trans        &trans  &kp HOME  &kp C_VOLUME_UP      &kp UP_ARROW  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT     &kp BACKSLASH  &kp EQUAL
+&trans      &trans           &trans        &trans  &kp END   &kp C_VOLUME_DOWN    &trans        &trans          &trans    &trans        &trans         &trans
+                                           &trans  &trans    &trans               &trans        &trans          &trans
             >;
         };
 
@@ -228,10 +228,10 @@
 
             label = "Raise";
             bindings = <
-&kp TILDE  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH    &kp DOLLAR  &kp PERCENT               &kp CARET  &kp AMPERSAND           &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-   &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &trans    &excel_highlight_up1         &trans  &excel_highlight_down  &excel_highlight_right               &kp PIPE        &kp PLUS
-   &trans           &trans        &trans        &trans        &trans       &trans            &excel_pivot         &trans                 &trans                  &trans                 &trans          &trans
-                                                &trans        &trans       &trans                  &trans         &trans             &bt BT_CLR
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET             &kp AMPERSAND  &kp ASTERISK           &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
+&trans     &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans         &excel_highlight_up1  &trans         &excel_highlight_down  &excel_highlight_right  &kp PIPE               &kp PLUS
+&trans     &trans           &trans        &trans        &trans        &trans         &excel_pivot          &trans         &trans                 &trans                  &trans                 &trans
+                                          &trans        &trans        &trans         &trans                &trans         &bt BT_CLR
             >;
         };
     };
