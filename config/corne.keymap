@@ -109,6 +109,7 @@
                 <&macro_release>,
                 <&kp LCTRL>;
         };
+
         ctrl_shift_tab: ctrl_shift_tab {
             compatible = "zmk,behavior-macro";
             label = "CTRL_SHIFT_TAB";
@@ -121,6 +122,7 @@
                 <&macro_release>,
                 <&kp LSHFT &kp LCTRL>;
         };
+
         excel_highlight_right: excel_highlight_right {
             compatible = "zmk,behavior-macro";
             label = "EXCEL_HIGHLIGHT_RIGHT";
@@ -133,6 +135,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LEFT_SHIFT>;
         };
+
         excel_highlight_down: excel_highlight_down {
             compatible = "zmk,behavior-macro";
             label = "EXCEL_HIGHLIGHT_DOWN";
@@ -145,6 +148,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LEFT_SHIFT>;
         };
+
         excel_highlight_up1: excel_highlight_up1 {
             compatible = "zmk,behavior-macro";
             label = "EXCEL_HIGHLIGHT_UP1";
@@ -157,6 +161,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
         };
+
         excel_pivot: excel_pivot {
             compatible = "zmk,behavior-macro";
             label = "EXCEL_PIVOT";
@@ -175,9 +180,7 @@
         lshft_bksp_del: lshft_bksp_del {
             compatible = "zmk,behavior-mod-morph";
             label = "LSHFT_BKSP_DEL";
-            bindings =
-                <&kp BACKSPACE>,
-                <&kp DELETE>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -196,10 +199,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T                   &kp Y      &kp U  &kp I         &kp O    &kp P     &lshft_bksp_del
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G                   &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B                   &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                         &kp LEFT_ALT  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2  &kp LEFT_GUI
+&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &lshft_bksp_del
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &mt RIGHT_SHIFT EQUAL
+                         &kp LEFT_ALT  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp LEFT_GUI
             >;
         };
 
