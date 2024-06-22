@@ -97,7 +97,7 @@
 
         softoff {
             bindings = <&soft_off>;
-            key-positions = <12 17>;
+            key-positions = <17 18>;
         };
     };
 
