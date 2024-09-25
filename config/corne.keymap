@@ -135,10 +135,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB                  &kp Q  &kp W  &kp E                &kp R             &kp T        &kp Y      &kp U              &kp I               &kp O    &kp P     &kp BACKSPACE
-&kp LCTRL                &kp A  &kp S  &mt LEFT_CONTROL D   &mt LEFT_SHIFT F  &kp G        &kp H      &mt RIGHT_SHIFT J  &mt LEFT_CONTROL K  &kp L    &kp SEMI  &kp SQT
-&mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C                &kp V             &kp B        &kp N      &kp M              &kp COMMA           &kp DOT  &kp FSLH  &kp MINUS
-                                       &mt LEFT_ALT ESCAPE  &lt 1 TAB         &kp ENTER    &kp SPACE  &lt 2 BACKSPACE    &kp DELETE
+&kp TAB                  &kp Q  &kp W  &kp E         &kp R  &kp T                   &kp Y      &kp U  &kp I       &kp O    &kp P     &kp BACKSPACE
+&kp LCTRL                &kp A  &kp S  &kp D         &kp F  &kp G                   &kp H      &kp J  &kp K       &kp L    &kp SEMI  &kp SQT
+&mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C         &kp V  &kp B                   &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp MINUS
+                                       &kp LEFT_ALT  &mo 1  &mt LEFT_SHIFT ENTER    &kp SPACE  &mo 2  &kp DELETE
             >;
         };
 
