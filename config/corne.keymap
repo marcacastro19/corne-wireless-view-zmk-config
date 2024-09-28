@@ -130,6 +130,16 @@
             tapping-term-ms = <120>;
             flavor = "tap-preferred";
         };
+
+        holdshft_tap: holdshft_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDSHFT_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <120>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -144,10 +154,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E       &kp R                  &kp T        &kp Y      &kp U                        &kp I       &kp O    &kp P     &kp BACKSPACE
-&kp LCTRL  &kp A  &kp S  &kp D       &kp F                  &kp G        &kp H      &kp J                        &kp K       &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C       &kp V                  &kp B        &kp N      &kp M                        &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp ESCAPE  &hold_tap_layer 1 TAB  &kp ENTER    &kp SPACE  &hold_tap_layer 2 BACKSPACE  &kp DELETE
+&kp TAB    &kp Q  &kp W  &kp E       &kp R                  &kp T                             &kp Y                            &kp U                        &kp I       &kp O    &kp P     &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S  &kp D       &kp F                  &kp G                             &kp H                            &kp J                        &kp K       &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C       &kp V                  &kp B                             &kp N                            &kp M                        &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                         &kp ESCAPE  &hold_tap_layer 1 TAB  &holdshft_tap LEFT_SHIFT ENTER    &holdshft_tap RIGHT_SHIFT SPACE  &hold_tap_layer 2 BACKSPACE  &kp DELETE
             >;
         };
 
