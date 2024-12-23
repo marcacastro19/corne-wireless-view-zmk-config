@@ -123,9 +123,9 @@
             hold-trigger-on-release;
         };
 
-        holdshft_tap: holdshft_tap {
+        holdshft_ctrl: holdshft_ctrl {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLDSHFT_TAP";
+            label = "HOLDSHFT_CTRL";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -134,7 +134,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <130>;
             hold-trigger-on-release;
-            hold-trigger-key-positions = <2 4 5 13 14 15 16 25 26 27 28 29 24 6 7 8 10 21>;
+            hold-trigger-key-positions = <2 4 5 13 14 15 16 25 26 27 28 29 24 6 7 8 10 21 37 40 41>;
         };
     };
 
@@ -150,10 +150,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &holdshft_tap LEFT_CONTROL E  &kp R    &kp T                      &kp Y                    &kp U          &holdshft_tap LEFT_CONTROL I  &kp O    &kp P     &kp BACKSPACE
-&kp LCTRL  &kp A  &kp S  &kp D                         &kp F    &kp G                      &kp H                    &kp J          &kp K                         &kp L    &kp SEMI  &kp SQT
-&sk LSHFT  &kp Z  &kp X  &kp C                         &kp V    &kp B                      &kp N                    &kp M          &kp COMMA                     &kp DOT  &kp FSLH  &sk RIGHT_SHIFT
-                         &kp ESCAPE                    &kp TAB  &hold_tap_layer 1 ENTER    &hold_tap_layer 2 SPACE  &kp BACKSPACE  &kp DELETE
+&kp TAB    &kp Q  &kp W  &holdshft_ctrl LEFT_CONTROL E  &kp R    &kp T                      &kp Y                    &kp U          &holdshft_ctrl LEFT_CONTROL I  &kp O    &kp P     &kp BACKSPACE
+&kp LCTRL  &kp A  &kp S  &kp D                          &kp F    &kp G                      &kp H                    &kp J          &kp K                          &kp L    &kp SEMI  &kp SQT
+&sk LSHFT  &kp Z  &kp X  &kp C                          &kp V    &kp B                      &kp N                    &kp M          &kp COMMA                      &kp DOT  &kp FSLH  &sk RIGHT_SHIFT
+                         &kp ESCAPE                     &kp TAB  &hold_tap_layer 1 ENTER    &hold_tap_layer 2 SPACE  &kp BACKSPACE  &kp DELETE
             >;
         };
 
