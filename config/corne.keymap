@@ -84,13 +84,13 @@
         };
 
         ctrl_l {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <13 14>;
+            bindings = <&sk LEFT_CONTROL>;
+            key-positions = <14 15>;
         };
 
         ctrl_r {
-            bindings = <&kp LEFT_CONTROL>;
-            key-positions = <21 22>;
+            bindings = <&sk LEFT_CONTROL>;
+            key-positions = <21 20>;
         };
     };
 
