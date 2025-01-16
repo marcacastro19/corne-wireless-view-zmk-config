@@ -78,11 +78,6 @@
             layers = <0>;
         };
 
-        num {
-            bindings = <&to 3>;
-            key-positions = <6 7>;
-        };
-
         ctrl_l {
             bindings = <&sk LEFT_CONTROL>;
             key-positions = <14 15>;
@@ -91,6 +86,16 @@
         ctrl_r {
             bindings = <&sk LEFT_CONTROL>;
             key-positions = <21 20>;
+        };
+
+        alt_l {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <2 3>;
+        };
+
+        alt_r {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <9 8>;
         };
     };
 
@@ -159,7 +164,7 @@
 
             label = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E       &kp R    &kp T                      &kp Y                    &kp U          &kp I       &kp O    &kp P     &kp BACKSPACE
+&kp TAB    &kp Q  &kp W  &kp E       &kp R    &kp T                      &kp Y                    &kp U          &kp I       &kp O    &kp P     &to 3
 &kp LCTRL  &kp A  &kp S  &kp D       &kp F    &kp G                      &kp H                    &kp J          &kp K       &kp L    &kp SEMI  &kp SQT
 &sk LSHFT  &kp Z  &kp X  &kp C       &kp V    &kp B                      &kp N                    &kp M          &kp COMMA   &kp DOT  &kp FSLH  &sk RIGHT_SHIFT
                          &kp ESCAPE  &kp TAB  &hold_tap_layer 1 ENTER    &hold_tap_layer 2 SPACE  &kp BACKSPACE  &kp DELETE
@@ -200,19 +205,10 @@
 
         layer_3 {
             bindings = <
-&none  &none  &none           &kp UP_ARROW  &none      &to 0        &none      &kp N7         &kp N8      &kp N9  &kp N0        &kp MINUS
-&none  &none  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &none        &none      &kp N4         &kp N5      &kp N6  &kp ASTERISK  &kp PLUS
-&none  &none  &none           &none         &none      &none        &none      &kp N1         &kp N2      &kp N3  &kp SLASH     &kp EQUAL
-                              &kp ESCAPE    &kp TAB    &kp ENTER    &kp SPACE  &kp BACKSPACE  &kp DELETE
-            >;
-        };
-
-        game {
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y      &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G      &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                         &none  &none  &kp RET    &kp SPACE  &kp BSPC  &kp DEL
+&to 0  &none  &none           &kp UP_ARROW  &none          &none        &none                    &kp N7         &kp N8      &kp N9  &kp N0        &kp MINUS
+&none  &none  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT      &none        &none                    &kp N4         &kp N5      &kp N6  &kp ASTERISK  &kp PLUS
+&none  &none  &none           &kp LC(C)     &kp LC(LS(V))  &none        &none                    &kp N1         &kp N2      &kp N3  &kp SLASH     &kp EQUAL
+                              &kp ESCAPE    &kp TAB        &kp ENTER    &hold_tap_layer 2 SPACE  &kp BACKSPACE  &kp DELETE
             >;
         };
     };
